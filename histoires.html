@@ -188,6 +188,42 @@
     .about-cta-band p { color: rgba(255,255,255,0.88); margin-bottom: 28px; font-size: 1.05rem; }
     .about-cta-band .btn-secondary { border-color: white; color: white; }
 
+    /* ── GALERIE PHOTO ── */
+.galerie-section { background: var(--cream); }
+.galerie-section .section-title { color: var(--brown); }
+
+.galerie-grid {
+  columns: 3;
+  column-gap: 16px;
+  margin-top: 40px;
+}
+.galerie-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.galerie-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(61,31,0,0.18);
+}
+.galerie-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .galerie-grid { columns: 2; }
+}
+@media (max-width: 480px) {
+  .galerie-grid { columns: 1; }
+}
+
+
     @media (max-width: 768px) {
       .about-two-col { grid-template-columns: 1fr; }
       .about-two-col.reverse { direction: ltr; }
@@ -263,8 +299,8 @@
         <div class="mission-grid">
           <div class="mission-card">
             <div class="mission-icon">🌾</div>
-            <h3>Soutenir les Agriculteurs</h3>
-            <p>Nous achetons directement auprès des producteurs locaux de Nyambaka, garantissant un revenu juste et une traçabilité totale.</p>
+            <h3>Encourager l’Entrepreneuriat Jeune</h3>
+            <p>Nous accompagnons les jeunes de Nyambaka qui transforment la mangue en une véritable opportunité économique locale, porteuse d’innovation et d’avenir</p>
           </div>
           <div class="mission-card">
             <div class="mission-icon">🎓</div>
@@ -303,8 +339,8 @@
             <div class="timeline-dot">🥭</div>
             <div class="timeline-body">
               <span class="timeline-year">2022</span>
-              <h3>Première Production de Jus</h3>
-              <p>Les premières bouteilles d'AEERNY Original sortent des mains des producteurs locaux — une étape historique pour la communauté.</p>
+              <h3>Développement des Activités Communautaires</h3>
+              <p>AEERNY multiplie les initiatives locales et rassemble progressivement une communauté engagée autour de la valorisation des richesses naturelles de Nyambaka et de l’entrepreneuriat jeune.</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -327,8 +363,8 @@
             <div class="timeline-dot">🚀</div>
             <div class="timeline-body">
               <span class="timeline-year">2026 & Au-delà</span>
-              <h3>Vers de Nouveaux Horizons</h3>
-              <p>Nouvelles variétés, nouvelles villes, et toujours la même promesse : du vrai, du pur, du Nyambaka.</p>
+              <h3>Vers une Mini-Usine de Production</h3>
+              <p>AEERNY entre dans une nouvelle phase de développement avec la mise en place d’une mini-usine de production, la recherche de partenariats stratégiques et le renforcement des actions marketing afin d’accroître l’impact du projet et sa visibilité.</p>
             </div>
           </div>
         </div>
@@ -342,6 +378,41 @@
       <a href="index.html#contact" class="btn-secondary">Nous Rejoindre sur WhatsApp</a>
     </div>
 
+    <!-- GALERIE PHOTO -->
+<section class="section galerie-section">
+  <div class="container">
+    <span class="section-label">En Images</span>
+    <h2 class="section-title" style="text-align:center;">Nyambaka à Travers l'Objectif</h2>
+    <div class="galerie-grid">
+
+      <div class="galerie-item">
+        <img src="ASSETS/p1.jpeg" alt="Récolte des mangues à Nyambaka" />
+      </div>
+
+      <div class="galerie-item">
+        <img src="ASSETS/p8.jpeg" alt="Production du jus AEERNY" />
+      </div>
+
+      <div class="galerie-item">
+        <img src="ASSETS/p3.jpeg" alt="L'équipe AEERNY" />
+      </div>
+
+      <div class="galerie-item">
+        <img src="ASSETS/p2.jpeg" alt="Les agriculteurs de Nyambaka" />
+      </div>
+
+      <div class="galerie-item">
+        <img src="ASSETS/p5.jpeg" alt="Les mangues de Nyambaka" />
+      </div>
+
+      <div class="galerie-item">
+        <img src="ASSETS/p6.jpeg" alt="AEERNY en communauté" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
   </main>
 
   <!-- FOOTER -->
@@ -349,7 +420,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <img src="ASSETS/AERNY LOGO.jpg" alt="Logo AEERNY" class="footer-logo" />
-        <p>Jus de mangue pur du cœur de Nyambaka. Ancré dans la communauté. Fait par la nature.</p>
+        <img src="ASSETS/p4.jpeg" alt="footer">
       </div>
       <div class="footer-links">
         <h4>Liens Rapides</h4>

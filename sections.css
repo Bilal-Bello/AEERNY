@@ -293,6 +293,14 @@
 }
 .footer-logo { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--orange); margin-bottom: 16px; }
 .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 300px; }
+.footer-nyambaka-logo {
+  max-width: 70px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 12px;
+  object-fit: contain;
+}
 .footer-links h4,
 .footer-social h4 { color: var(--orange); font-family: var(--font-head); font-size: 1.1rem; margin-bottom: 16px; }
 .footer-links ul { display: flex; flex-direction: column; gap: 10px; }
