@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notre Histoire – AEERNY</title>
+  <meta name="description" content="Découvrez l'histoire d'AEERNY, née de la passion pour Nyambaka et son engagement envers les agriculteurs locaux et les étudiants." />
+  <meta name="author" content="AEERNY" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="sections.css" />
+  <style>
+    /* ── PAGE HERO ── */
+    .page-hero {
+      position: relative;
+      min-height: 55vh;
+      display: flex;
+      align-items: flex-end;
+      background: linear-gradient(135deg, var(--brown) 0%, #6B3500 50%, var(--green) 100%);
+      padding: 100px 24px 60px;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('ASSETS/aeerny2.jpg') center/cover no-repeat;
+      opacity: 0.18;
+      z-index: 0;
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 880px;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+    }
+    .page-hero-content .section-label { color: var(--orange); }
+    .page-hero-content h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+    .page-hero-content p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ── ABOUT BODY ── */
+    .about-full { background: var(--orange-light); }
+
+    .about-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .about-two-col.reverse { direction: rtl; }
+    .about-two-col.reverse > * { direction: ltr; }
+
+    .about-img {
+      border-radius: var(--radius);
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+    .about-text h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--brown);
+      margin-bottom: 16px;
+    }
+    .about-text p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    /* ── MISSION CARDS ── */
+    .mission-section { background: var(--green); }
+    .mission-section .section-title { color: var(--white); }
+    .mission-section .section-label { color: var(--orange); }
+    .mission-section .section-sub { color: rgba(255,255,255,0.75); }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .mission-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius);
+      padding: 36px 24px;
+      text-align: center;
+      color: var(--white);
+      transition: background var(--transition), transform var(--transition);
+    }
+    .mission-card:hover { background: rgba(255,255,255,0.18); transform: translateY(-4px); }
+    .mission-icon { font-size: 2.8rem; margin-bottom: 16px; }
+    .mission-card h3 {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--orange);
+    }
+    .mission-card p { font-size: 0.95rem; line-height: 1.65; color: rgba(255,255,255,0.85); }
+
+    /* ── TIMELINE ── */
+    .timeline-section { background: var(--cream); }
+    .timeline { position: relative; max-width: 680px; margin: 40px auto 0; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 0; bottom: 0;
+      width: 3px;
+      background: var(--orange);
+      border-radius: 2px;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 28px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .timeline-dot {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      z-index: 1;
+      box-shadow: 0 0 0 4px var(--cream);
+    }
+    .timeline-body {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      box-shadow: var(--shadow);
+      flex: 1;
+    }
+    .timeline-year {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 50px;
+      margin-bottom: 8px;
+    }
+    .timeline-body h3 {
+      font-family: var(--font-head);
+      color: var(--brown);
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+    .timeline-body p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; }
+
+    /* ── CTA BAND ── */
+    .about-cta-band {
+      background: var(--orange);
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .about-cta-band h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .about-cta-band p { color: rgba(255,255,255,0.88); margin-bottom: 28px; font-size: 1.05rem; }
+    .about-cta-band .btn-secondary { border-color: white; color: white; }
+
+    @media (max-width: 768px) {
+      .about-two-col { grid-template-columns: 1fr; }
+      .about-two-col.reverse { direction: ltr; }
+      .about-img { height: 280px; }
+      .timeline::before { left: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <nav class="sidebar" id="sidebar" role="navigation" aria-label="Navigation Principale">
+    <div class="sidebar-header">
+      <img src="ASSETS/AERNY LOGO.jpg" alt="Logo AEERNY" class="sidebar-logo" />
+      <button class="sidebar-close" id="sidebarClose" aria-label="Fermer le menu">&#10005;</button>
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#produits">Nos Produits</a></li>
+      <li><a href="notre-histoire.html">Notre Histoire</a></li>
+      <li><a href="nos-realisations.html">Nos Réalisations</a></li>
+      <li><a href="index.html#temoignages">Témoignages</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="sidebar-footer-note">Pur Mangue. Pure Joie.</div>
+  </nav>
+
+  <header class="topbar" id="topbar">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="topbar-logo">
+      <img src="ASSETS/AERNY LOGO.jpg" alt="AEERNY" />
+    </a>
+    <a href="index.html#contact" class="topbar-cta">Commander</a>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div class="page-hero-content">
+        <span class="section-label">Notre Histoire</span>
+        <h1>Enracinés à Nyambaka</h1>
+        <p>De l'amour d'une communauté est née une bouteille. Découvrez pourquoi AEERNY est bien plus qu'un jus de mangue.</p>
+      </div>
+    </div>
+
+    <!-- NOTRE HISTOIRE — TEXTE + IMAGES -->
+    <section class="section about-full">
+      <div class="container">
+        <div class="about-two-col">
+          <div>
+            <img src="ASSETS/aeernuMAGe.jpeg" alt="Mangues fraîches de Nyambaka" class="about-img" />
+          </div>
+          <div class="about-text">
+            <h2>Un Jus Né d'une Conviction</h2>
+            <p>AEERNY est née d'une conviction simple : le meilleur jus de mangue vient des meilleures mangues — et les meilleures mangues poussent ici, à Nyambaka.</p>
+            <p>Nous sommes l'<strong>Association des Élèves et Étudiants Ressortissants de Nyambaka</strong>, une initiative communautaire transformée en marque de jus. Chaque bouteille vendue soutient les agriculteurs locaux, les étudiants locaux, et les avenirs locaux.</p>
+            <p>Pas de raccourcis industriels. Pas d'additifs artificiels. Juste des mangues, du soin, et la fierté d'une communauté.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION -->
+    <section class="section mission-section">
+      <div class="container">
+        <span class="section-label">Notre Mission</span>
+        <h2 class="section-title">Ce Qui Nous Anime</h2>
+        <p class="section-sub">Trois piliers fondateurs qui guident chaque décision chez AEERNY.</p>
+        <div class="mission-grid">
+          <div class="mission-card">
+            <div class="mission-icon">🌾</div>
+            <h3>Soutenir les Agriculteurs</h3>
+            <p>Nous achetons directement auprès des producteurs locaux de Nyambaka, garantissant un revenu juste et une traçabilité totale.</p>
+          </div>
+          <div class="mission-card">
+            <div class="mission-icon">🎓</div>
+            <h3>Financer les Études</h3>
+            <p>Une partie de nos revenus contribue aux bourses d'études pour les jeunes ressortissants de Nyambaka.</p>
+          </div>
+          <div class="mission-card">
+            <div class="mission-icon">🌱</div>
+            <h3>Préserver la Nature</h3>
+            <p>Sans conservateurs, sans colorants. Nous défendons une production respectueuse de l'environnement à chaque étape.</p>
+          </div>
+          <div class="mission-card">
+            <div class="mission-icon">🤝</div>
+            <h3>Renforcer la Communauté</h3>
+            <p>AEERNY rassemble. Chaque gorgée est un acte de solidarité envers ceux qui font vivre Nyambaka.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section timeline-section">
+      <div class="container">
+        <span class="section-label">Notre Parcours</span>
+        <h2 class="section-title">Les Grandes Étapes</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot">🌱</div>
+            <div class="timeline-body">
+              <span class="timeline-year">2020</span>
+              <h3>La Fondation de l'AEERNY</h3>
+              <p>L'association voit le jour, portée par la volonté de jeunes Nyambakans de redonner à leur terre d'origine.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">🥭</div>
+            <div class="timeline-body">
+              <span class="timeline-year">2022</span>
+              <h3>Première Production de Jus</h3>
+              <p>Les premières bouteilles d'AEERNY Original sortent des mains des producteurs locaux — une étape historique pour la communauté.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">📦</div>
+            <div class="timeline-body">
+              <span class="timeline-year">2023</span>
+              <h3>Lancement Commercial</h3>
+              <p>AEERNY commence à distribuer dans les villes environnantes. Le bouche-à-oreille fait le reste.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">🏆</div>
+            <div class="timeline-body">
+              <span class="timeline-year">2024–2025</span>
+              <h3>Reconnaissance & Croissance</h3>
+              <p>Premières couvertures médiatiques, premiers prix, et une communauté de clients fidèles qui ne cesse de grandir.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">🚀</div>
+            <div class="timeline-body">
+              <span class="timeline-year">2026 & Au-delà</span>
+              <h3>Vers de Nouveaux Horizons</h3>
+              <p>Nouvelles variétés, nouvelles villes, et toujours la même promesse : du vrai, du pur, du Nyambaka.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="about-cta-band">
+      <h2>Vous Faites Partie de l'Histoire</h2>
+      <p>Chaque commande que vous passez soutient une communauté, un agriculteur, un avenir.</p>
+      <a href="index.html#contact" class="btn-secondary">Nous Rejoindre sur WhatsApp</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="ASSETS/AERNY LOGO.jpg" alt="Logo AEERNY" class="footer-logo" />
+        <p>Jus de mangue pur du cœur de Nyambaka. Ancré dans la communauté. Fait par la nature.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Liens Rapides</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#produits">Nos Produits</a></li>
+          <li><a href="notre-histoire.html">Notre Histoire</a></li>
+          <li><a href="nos-realisations.html">Nos Réalisations</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Suivez-Nous</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61570959093481" aria-label="Facebook">Facebook</a>
+          <a href="https://www.instagram.com/a.e.e.r.n.y/" aria-label="Instagram">Instagram</a>
+          <a href="https://www.youtube.com/@A.E.E.R.N.Y" aria-label="YouTube">YouTube</a>
+          <a href="https://whatsapp.com/channel/0029VbAmsZG0lwgl0ArW0I0J" aria-label="WhatsApp">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AEERNY. Tous droits réservés. | Nyambaka, Cameroun</p>
+    </div>
+  </footer>
+
+  <script src="sidebar.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

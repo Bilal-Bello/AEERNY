@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Réalisations – AEERNY</title>
+  <meta name="description" content="Découvrez les récompenses, distinctions et couvertures médiatiques d'AEERNY — la fierté de Nyambaka." />
+  <meta name="author" content="AEERNY" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="sections.css" />
+  <style>
+    /* ── PAGE HERO ── */
+    .page-hero {
+      position: relative;
+      min-height: 50vh;
+      display: flex;
+      align-items: flex-end;
+      background: linear-gradient(135deg, var(--brown) 0%, #3D2A00 40%, var(--green) 100%);
+      padding: 100px 24px 60px;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '🏆';
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14rem;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+    }
+    .page-hero-content .section-label { color: var(--orange); }
+    .page-hero-content h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+    .page-hero-content p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ── AWARD CARDS ── */
+    .awards-section { background: var(--orange-light); }
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .award-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 0;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .award-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(61,31,0,0.16); }
+    .award-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: var(--orange);
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .award-card.gold::before { background: linear-gradient(90deg, #F5A623, #F7C948); }
+    .award-card.green::before { background: var(--green); }
+
+    .award-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--orange-light);
+      color: var(--orange-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+    .award-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+
+    }
+
+    .award-img-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  top: 50%;                          /* texte commence à mi-hauteur */
+  background: linear-gradient(to bottom, transparent, rgba(61,31,0,0.82));
+  color: white;
+  padding: 16px 16px 12px;
+  display: flex;
+  align-items: flex-end;
+  font-family: var(--font-head);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+.award-card-body {
+  padding: 20px 24px 24px;
+}
+    .award-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}     
+
+    .award-card h3 {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      color: var(--brown);
+      margin-bottom: 10px;
+    }
+    .award-card p { color: var(--text-muted); line-height: 1.7; font-size: 0.95rem; margin-bottom: 12px; }
+    .award-year {
+      font-weight: 700;
+      color: var(--orange);
+      font-size: 0.85rem;
+    }
+
+    /* ── PRESS SECTION ── */
+    .press-section { background: var(--cream); }
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .press-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--green);
+      transition: transform var(--transition);
+    }
+    .press-card:hover { transform: translateY(-4px); }
+    .press-source {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .press-source-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .press-source-name {
+      font-weight: 700;
+      color: var(--brown);
+      font-size: 0.95rem;
+    }
+    .press-source-type {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .press-card blockquote {
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.7;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+      border: none;
+      padding: 0;
+    }
+    .press-date { font-size: 0.82rem; color: var(--orange); font-weight: 700; }
+
+    /* ── IMPACT NUMBERS ── */
+    .impact-section { background: var(--brown); }
+    .impact-section .section-title { color: var(--white); }
+    .impact-section .section-label { color: var(--orange); }
+    .impact-section .section-sub { color: rgba(255,255,255,0.7); }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .impact-stat {
+      text-align: center;
+      padding: 32px 20px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.05);
+      transition: background var(--transition);
+    }
+    .impact-stat:hover { background: rgba(255,255,255,0.1); }
+    .impact-number {
+      font-family: var(--font-head);
+      font-size: 3rem;
+      color: var(--orange);
+      display: block;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .impact-label { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+
+    /* ── CTA BAND ── */
+    .realisations-cta {
+      background: var(--orange);
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .realisations-cta h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .realisations-cta p { color: rgba(255,255,255,0.88); margin-bottom: 28px; font-size: 1.05rem; }
+    .realisations-cta .btn-secondary { border-color: white; color: white; }
+
+    @media (max-width: 600px) {
+      .impact-number { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <nav class="sidebar" id="sidebar" role="navigation" aria-label="Navigation Principale">
+    <div class="sidebar-header">
+      <img src="ASSETS/AERNY LOGO.jpg" alt="Logo AEERNY" class="sidebar-logo" />
+      <button class="sidebar-close" id="sidebarClose" aria-label="Fermer le menu">&#10005;</button>
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#produits">Nos Produits</a></li>
+      <li><a href="notre-histoire.html">Notre Histoire</a></li>
+      <li><a href="nos-realisations.html">Nos Réalisations</a></li>
+      <li><a href="index.html#temoignages">Témoignages</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="sidebar-footer-note">Pur Mangue. Pure Joie.</div>
+  </nav>
+
+  <header class="topbar" id="topbar">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="topbar-logo">
+      <img src="ASSETS/AERNY LOGO.jpg" alt="AEERNY" />
+    </a>
+    <a href="index.html#contact" class="topbar-cta">Commander</a>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div class="page-hero-content">
+        <span class="section-label">Nos Réalisations</span>
+        <h1>La Fierté de Nyambaka</h1>
+        <p>Prix, distinctions et couvertures médiatiques qui témoignent de notre engagement envers la qualité et la communauté.</p>
+      </div>
+    </div>
+
+    <!-- AWARDS -->
+    <section class="section awards-section">
+      <div class="container">
+        <span class="section-label">Reconnaissances & Prix</span>
+        <h2 class="section-title">Nos Distinctions</h2>
+        <p class="section-sub">Des récompenses qui reflètent notre exigence de qualité et notre engagement communautaire.</p>
+        <div class="awards-grid">
+<!--1-->
+         <div class="award-card gold">
+  <div class="award-img-wrap">
+    <img src="ASSETS/hiltonpresen.jpg" alt="Prix Innovation Agroalimentaire" />
+    <div class="award-img-caption"> Distinction Nationale des Communes Modèles du Cameroun</div>
+  </div>
+  <div class="award-card-body">
+    <div class="award-badge">🏆 Commune Modèle du Cameroun</div>
+    <p> En 2025, à l’Hôtel Hilton de Yaoundé, la Commune de Nyambaka 
+      a été distinguée parmi les Communes modèles du Cameroun. 
+      Cette reconnaissance célèbre les efforts du Maire Abbo Oumarou, 
+      de son équipe et de toute la communauté engagée pour le développement local.</p>
+    <div class="award-year">2025 — Région du centre</div>
+  </div>
+</div>
+<!--2-->
+           <div class="award-card ">
+  <div class="award-img-wrap">
+    <img src="ASSETS/aeernyecole.jpg" alt="Prix Innovation Agroalimentaire" />
+    <div class="award-img-caption"> Initiative Back to School mise en lumière par la CRTV</div>
+  </div>
+  <div class="award-card-body">
+    <div class="award-badge">🎓 Soutien à l’Éducation</div>
+    <p>La CRTV a présenté notre initiative Back to School ayant permis 
+      la distribution de kits scolaires et de lampes solaires à 300 élèves 
+      de Garoua-Boulaï, Nyambaka et Idool. Un projet porté par CAMTURK 
+      et son équipe engagée pour l’éducation et le développement local.</p>
+    <div class="award-year">2025 — Région de l'Adamaoua</div>
+  </div>
+  <!--3-->
+</div>
+ <div class="award-card">
+  <div class="award-img-wrap">
+    <img src="ASSETS/conference.jpg" alt="FER Event" />
+    <div class="award-img-caption">
+      Participation à la Foire de l’Employabilité Rurale (FER)
+    </div>
+  </div>
+
+  <div class="award-card-body">
+    <div class="award-badge">🤝 Engagement Jeunesse</div>
+
+    <p>
+      AEERNY a participé à la restitution de la FER à l’IFC Yaoundé, 
+      aux côtés du MINJEC, MINEFOP, MINAC et plusieurs acteurs engagés 
+      pour l’insertion professionnelle des jeunes. Cette rencontre a permis 
+      de renforcer nos réseaux et d’explorer de nouvelles opportunités 
+      pour la jeunesse de Nyambaka.
+    </p>
+
+    <div class="award-year">2025 — Yaoundé, Cameroun</div>
+  </div>
+</div>
+
+<!--
+          <div class="award-card gold">
+            <span class="award-icon-large">🥇</span>
+            <div class="award-badge">🏅 Excellence</div>
+            <h3>Meilleur Jus Naturel — Salon des Saveurs du Cameroun</h3>
+            <p>AEERNY Original a été plébiscité par le jury du Salon des Saveurs du Cameroun pour son authenticité et la pureté de ses ingrédients.</p>
+            <div class="award-year">2024 — Yaoundé</div>
+          </div>
+
+          <div class="award-card">
+            <span class="award-icon-large">🤝</span>
+            <div class="award-badge">💚 Communauté</div>
+            <h3>Prix de l'Initiative Solidaire</h3>
+            <p>Attribué à AEERNY pour son modèle économique inclusif qui réinvestit une partie des bénéfices dans les bourses scolaires locales.</p>
+            <div class="award-year">2025 — Cameroun</div>
+          </div>
+
+          <div class="award-card green">
+            <span class="award-icon-large">🌍</span>
+            <div class="award-badge">🚀 Croissance</div>
+            <h3>Start-up Communautaire de l'Année</h3>
+            <p>Distingués pour la progression remarquable de notre distribution et notre capacité à fédérer une communauté autour d'un produit local.</p>
+            <div class="award-year">2025 — Région Nord</div>
+          </div>
+
+        -->
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT NUMBERS -->
+    <section class="section impact-section">
+      <div class="container">
+        <span class="section-label">Notre Impact en Chiffres</span>
+        <h2 class="section-title">Des Résultats Concrets</h2>
+        <p class="section-sub">Des chiffres qui parlent d'eux-mêmes — et derrière chaque chiffre, des personnes.</p>
+        <div class="impact-grid">
+          <div class="impact-stat">
+            <span class="impact-number">5+</span>
+            <span class="impact-label">Distinctions Reçues</span>
+          </div>
+          <div class="impact-stat">
+            <span class="impact-number">12+</span>
+            <span class="impact-label">Agriculteurs Soutenus</span>
+          </div>
+          <div class="impact-stat">
+            <span class="impact-number">3</span>
+            <span class="impact-label">Villes de Distribution</span>
+          </div>
+          <div class="impact-stat">
+            <span class="impact-number">100%</span>
+            <span class="impact-label">Naturel & Sans Additifs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESS COVERAGE -->
+    <section class="section press-section">
+      <div class="container">
+        <span class="section-label">Presse & Médias</span>
+        <h2 class="section-title">Ce Qu'on Dit de Nous</h2>
+        <p class="section-sub">Des médias camerounais qui ont relayé notre histoire et notre vision.</p>
+        <div class="press-grid">
+
+          <div class="press-card">
+            <div class="press-source">
+              <div class="press-source-icon">📻</div>
+              <div>
+                <div class="press-source-name">Radio Régionale de l'Adamaoua</div>
+                <div class="press-source-type">Radio — Ngaoundéré</div>
+              </div>
+            </div>
+            <blockquote>« AEERNY est l'exemple parfait d'une initiative locale qui parvient à transformer les ressources naturelles de Nyambaka en opportunités économiques durables pour toute la région. »</blockquote>
+            <div class="press-date">Septembre 2024</div>
+          </div>
+
+          <div class="press-card">
+            <div class="press-source">
+              <div class="press-source-icon">📱</div>
+              <div>
+                <div class="press-source-name">Cameroun Web Actualités</div>
+                <div class="press-source-type">Web — Yaoundé</div>
+              </div>
+            </div>
+            <blockquote>« La marque AEERNY impressionne par sa cohérence : un produit sain, une démarche communautaire et une croissance réelle. Un modèle à suivre pour la jeunesse entrepreneuriale camerounaise. »</blockquote>
+            <div class="press-date">Mars 2025</div>
+          </div>
+
+          <div class="press-card">
+            <div class="press-source">
+              <div class="press-source-icon">📰</div>
+              <div>
+                <div class="press-source-name">Le Jeune Entrepreneur</div>
+                <div class="press-source-type">Magazine — Douala</div>
+              </div>
+            </div>
+            <blockquote>« Rencontre avec les fondateurs d'AEERNY : comment une association étudiante a réussi à créer une marque de jus naturel qui rayonne bien au-delà de Nyambaka. »</blockquote>
+            <div class="press-date">Juin 2024</div>
+          </div>
+
+          <div class="press-card">
+            <div class="press-source">
+              <div class="press-source-icon">📺</div>
+              <div>
+                <div class="press-source-name">Télévision Régionale Nord</div>
+                <div class="press-source-type">Télévision — Garoua</div>
+              </div>
+            </div>
+            <blockquote>« Un reportage sur AEERNY, cette jeune marque qui prouve que l'agroalimentaire camerounais peut être à la fois authentique, sain et porteur de développement local. »</blockquote>
+            <div class="press-date">Novembre 2024</div>
+          </div>
+
+          <div class="press-card">
+            <div class="press-source">
+              <div class="press-source-icon">🌐</div>
+              <div>
+                <div class="press-source-name">StartupCamer.com</div>
+                <div class="press-source-type">Web — National</div>
+              </div>
+            </div>
+            <blockquote>« AEERNY figure parmi les 10 start-ups camerounaises les plus prometteuses du secteur agri-food en 2025, selon notre panel d'experts. »</blockquote>
+            <div class="press-date">Janvier 2025</div>
+          </div>
+
+          <div class="press-card">
+            <div class="press-source">
+              <div class="press-source-icon">📻</div>
+              <div>
+                <div class="press-source-name">Voix du Paysan Camerounais</div>
+                <div class="press-source-type">Radio — National</div>
+              </div>
+            </div>
+            <blockquote>« L'histoire d'AEERNY, c'est celle de jeunes qui ont choisi de valoriser leur terroir plutôt que de le quitter. Une bouffée d'espoir pour l'agriculture locale. »</blockquote>
+            <div class="press-date">Février 2025</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="realisations-cta">
+      <h2>Vous Voulez Faire Partie de l'Aventure ?</h2>
+      <p>Commandeze, distribuez, ou simplement partagez notre histoire. Chaque geste compte.</p>
+      <a href="index.html#contact" class="btn-secondary">Nous Contacter sur WhatsApp</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="ASSETS/AERNY LOGO.jpg" alt="Logo AEERNY" class="footer-logo" />
+        <p>Jus de mangue pur du cœur de Nyambaka. Ancré dans la communauté. Fait par la nature.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Liens Rapides</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#produits">Nos Produits</a></li>
+          <li><a href="notre-histoire.html">Notre Histoire</a></li>
+          <li><a href="nos-realisations.html">Nos Réalisations</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Suivez-Nous</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61570959093481" aria-label="Facebook">Facebook</a>
+          <a href="https://www.instagram.com/a.e.e.r.n.y/" aria-label="Instagram">Instagram</a>
+          <a href="https://www.youtube.com/@A.E.E.R.N.Y" aria-label="YouTube">YouTube</a>
+          <a href="https://whatsapp.com/channel/0029VbAmsZG0lwgl0ArW0I0J" aria-label="WhatsApp">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AEERNY. Tous droits réservés. | Nyambaka, Cameroun</p>
+    </div>
+  </footer>
+
+  <script src="sidebar.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

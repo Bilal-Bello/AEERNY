@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AEERNY Mango Juice – Pure Taste from Nyambaka</title>
-  <meta name="description" content="AEERNY brings you 100% natural mango juice from the heart of Nyambaka. No artificial preservatives. Pure, refreshing, rich in vitamins." />
-  <meta name="keywords" content="mango juice, AEERNY, Nyambaka, natural juice, fruit drink, pure mango" />
+  <title>AEERNY – Jus de Mangue Pur de Nyambaka</title>
+  <meta name="description" content="AEERNY vous apporte 100% de jus de mangue naturel du cœur de Nyambaka. Sans conservateurs artificiels. Pur, rafraîchissant, riche en vitamines." />
+  <meta name="keywords" content="jus de mangue, AEERNY, Nyambaka, jus naturel, boisson fruitée, mangue pure" />
   <meta name="author" content="AEERNY" />
-  <meta property="og:title" content="AEERNY Mango Juice – Pure Taste from Nyambaka" />
-  <meta property="og:description" content="100% natural mango juice. Rich in vitamins, no preservatives." />
+  <meta property="og:title" content="AEERNY – Jus de Mangue Pur de Nyambaka" />
+  <meta property="og:description" content="100% jus de mangue naturel. Riche en vitamines, sans conservateurs." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/hero.jpg" />
   <meta name="robots" content="index, follow" />
@@ -25,31 +25,32 @@
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
   <!-- SIDEBAR -->
-  <nav class="sidebar" id="sidebar" role="navigation" aria-label="Main Navigation">
+  <nav class="sidebar" id="sidebar" role="navigation" aria-label="Navigation Principale">
     <div class="sidebar-header">
-      <img src="ASSETS/AERNY LOGO.jpg" alt="AEERNY Logo" class="sidebar-logo" />
-      <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">&#10005;</button>
+      <img src="ASSETS/AERNY LOGO.jpg" alt="Logo AEERNY" class="sidebar-logo" />
+      <button class="sidebar-close" id="sidebarClose" aria-label="Fermer le menu">&#10005;</button>
     </div>
     <ul class="sidebar-nav">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="#produits">Nos Produits</a></li>
+      <li><a href="histoires.html">Notre Histoire</a></li>
+      <li><a href="realisation.html">Nos Réalisations</a></li>
+      <li><a href="#temoignages">Témoignages</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="sidebar-footer-note">Pure Mango. Pure Joy.</div>
+    <div class="sidebar-footer-note">Pur Mangue. Pure Joie.</div>
   </nav>
 
   <!-- TOP BAR -->
   <header class="topbar" id="topbar">
-    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Ouvrir le menu">
       <span></span><span></span><span></span>
     </button>
-    <a href="#hero" class="topbar-logo">
+    <a href="index.html" class="topbar-logo">
       <img src="ASSETS/AERNY LOGO.jpg" alt="AEERNY" />
     </a>
-    <a href="#contact" class="topbar-cta">Order Now</a>
+    <a href="#contact" class="topbar-cta">Commander</a>
   </header>
 
   <main>
@@ -58,66 +59,49 @@
     <section class="hero" id="hero">
       <div class="hero-bg"></div>
       <div class="hero-content">
-        <span class="hero-tagline">100% Natural · No Preservatives</span>
-        <h1>Taste the Soul<br/>of Nyambaka</h1>
-        <p>Cold-pressed mango juice crafted from the finest mangoes grown in the heart of Nyambaka — bursting with flavor and packed with vitamins.</p>
+        <span class="hero-tagline">100% Naturel · Sans Conservateurs</span>
+        <h1>Savourez l'Âme<br/>de Nyambaka</h1>
+        <p>Jus de mangue pressé à froid, élaboré à partir des meilleures mangues cultivées au cœur de Nyambaka — débordant de saveur et riche en vitamines.</p>
         <div class="hero-btns">
-          <a href="#products" class="btn-primary">Explore Our Juice</a>
-          <a href="#about" class="btn-secondary">Our Story</a>
+          <a href="#produits" class="btn-primary">Découvrir Notre Jus</a>
+          <a href="histoires.html" class="btn-secondary">Notre Histoire</a>
         </div>
       </div>
       <div class="hero-image">
-        <video autoplay loop  muted playsinline >
+        <video autoplay loop muted playsinline>
           <source src="ASSETS/AEERNY VIDEO.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="hero-scroll-hint">Scroll down ↓</div>
+      <div class="hero-scroll-hint">Défiler vers le bas ↓</div>
     </section>
 
     <!-- PRODUCTS SECTION -->
-    <section class="section" id="products">
+    <section class="section" id="produits">
       <div class="container">
-        <span class="section-label">Our Range</span>
-        <h2 class="section-title">Fresh. Natural. Delicious.</h2>
-        <p class="section-sub">One variety today — a whole tropical family tomorrow. Built to grow.</p>
-        <div class="products-grid">
+        <span class="section-label">Notre Gamme</span>
+        <h2 class="section-title">Frais. Naturel. Délicieux.</h2>
+        <p class="section-sub">Une variété aujourd'hui — toute une famille tropicale demain. Conçu pour grandir.</p>
+        <div class="products-grid products-grid--single">
 
-          <!-- VARIETY 1 — ACTIVE -->
-          <article class="product-card active" itemscope itemtype="https://schema.org/Product">
-            <div class="product-badge">Available Now</div>
-            <div class="product-img-wrap">
-              <img src="ASSETS/aeerny1.jpg" alt="AEERNY Original Mango Juice" itemprop="image" />
-            </div>
-            <div class="product-info">
-              <h3 itemprop="name">AEERNY Original</h3>
-              <p itemprop="description">Pure mango pulp, lightly sweetened, nothing artificial. The real taste of Nyambaka in every sip.</p>
-              <a href="#contact" class="btn-primary small">Order Now</a>
+          
+          <!-- PRODUIT PRINCIPAL -->
+<article class="product-card product-card--image-slot">
+  <div class="product-img-wrap product-img-wrap--tall">
+    <img src="ASSETS/aeerny1.jpg" alt="Jus de Mangue AEERNY Original" />
+  </div>
+</article>
+
+          <!-- SLOT IMAGE 2 -->
+          <article class="product-card product-card--image-slot">
+            <div class="product-img-wrap product-img-wrap--tall">
+              <img src="ASSETS/aeerny2.jpg" alt="Mangues fraîches de Nyambaka" />
             </div>
           </article>
 
-          <!-- VARIETY 2 — COMING SOON -->
-          <article class="product-card coming-soon">
-            <div class="product-badge soon">Coming Soon</div>
-            <div class="product-img-wrap placeholder">
-              <div class="coming-icon">🥭</div>
-            </div>
-            <div class="product-info">
-              <h3>AEERNY Lite</h3>
-              <p>Low-sugar variant — all the mango goodness with lighter sweetness. Perfect for the health-conscious.</p>
-              <span class="btn-disabled">Coming Soon</span>
-            </div>
-          </article>
-
-          <!-- VARIETY 3 — COMING SOON -->
-          <article class="product-card coming-soon">
-            <div class="product-badge soon">Coming Soon</div>
-            <div class="product-img-wrap placeholder">
-              <div class="coming-icon">✨</div>
-            </div>
-            <div class="product-info">
-              <h3>AEERNY Sparkling</h3>
-              <p>The fizzy mango experience — sparkling water meets real mango pulp for a refreshing twist.</p>
-              <span class="btn-disabled">Coming Soon</span>
+          <!-- SLOT IMAGE 3 -->
+          <article class="product-card product-card--image-slot">
+            <div class="product-img-wrap product-img-wrap--tall">
+              <img src="ASSETS/aerrny.jpg" alt="AEERNY – La récolte" />
             </div>
           </article>
 
@@ -125,172 +109,175 @@
       </div>
     </section>
 
-    <!-- NUTRITION / CALORIFIC VALUE SECTION -->
+    <!-- VALEURS NUTRITIONNELLES -->
     <section class="section nutrition-section" id="nutrition">
       <div class="container">
-        <span class="section-label">Nutrition Facts</span>
-        <h2 class="section-title">Know What You Drink</h2>
-        <p class="section-sub">Per 250ml serving of AEERNY Original Mango Juice</p>
+        <span class="section-label">Valeurs Nutritionnelles</span>
+        <h2 class="section-title">Sachez Ce Que Vous Buvez</h2>
+        <p class="section-sub">Pour une portion de 250ml de Jus de Mangue AEERNY Original</p>
         <div class="nutrition-layout">
           <div class="nutrition-panel">
             <div class="nutrition-header">
-              <strong>Nutrition Facts</strong>
-              <span>Serving Size: 250ml (1 glass)</span>
+              <strong>Valeurs Nutritionnelles</strong>
+              <span>Portion : 250ml (1 verre)</span>
             </div>
             <div class="nutrition-row big"><span>Calories</span><span>120 kcal</span></div>
-            <div class="nutrition-row"><span>Total Fat</span><span>0.4 g</span></div>
-            <div class="nutrition-row sub"><span>Saturated Fat</span><span>0.1 g</span></div>
-            <div class="nutrition-row"><span>Carbohydrates</span><span>28 g</span></div>
-            <div class="nutrition-row sub"><span>of which Sugars</span><span>24 g</span></div>
-            <div class="nutrition-row"><span>Dietary Fiber</span><span>1.5 g</span></div>
-            <div class="nutrition-row"><span>Protein</span><span>0.8 g</span></div>
+            <div class="nutrition-row"><span>Matières Grasses Totales</span><span>0,4 g</span></div>
+            <div class="nutrition-row sub"><span>dont Acides Gras Saturés</span><span>0,1 g</span></div>
+            <div class="nutrition-row"><span>Glucides</span><span>28 g</span></div>
+            <div class="nutrition-row sub"><span>dont Sucres</span><span>24 g</span></div>
+            <div class="nutrition-row"><span>Fibres Alimentaires</span><span>1,5 g</span></div>
+            <div class="nutrition-row"><span>Protéines</span><span>0,8 g</span></div>
             <div class="nutrition-row"><span>Sodium</span><span>10 mg</span></div>
             <div class="nutrition-divider"></div>
-            <div class="nutrition-row"><span>Vitamin C</span><span>45% DV</span></div>
-            <div class="nutrition-row"><span>Vitamin A</span><span>20% DV</span></div>
+            <div class="nutrition-row"><span>Vitamine C</span><span>45% AJR</span></div>
+            <div class="nutrition-row"><span>Vitamine A</span><span>20% AJR</span></div>
             <div class="nutrition-row"><span>Potassium</span><span>250 mg</span></div>
           </div>
           <div class="nutrition-highlights">
             <div class="highlight-card">
               <div class="highlight-icon">🚫</div>
-              <strong>No Artificial<br/>Preservatives</strong>
+              <strong>Sans Conservateurs<br/>Artificiels</strong>
             </div>
             <div class="highlight-card">
               <div class="highlight-icon">🌿</div>
-              <strong>100% Natural<br/>Ingredients</strong>
+              <strong>100% Ingrédients<br/>Naturels</strong>
             </div>
             <div class="highlight-card">
               <div class="highlight-icon">💊</div>
-              <strong>Rich in<br/>Vitamin C & A</strong>
+              <strong>Riche en<br/>Vitamines C & A</strong>
             </div>
             <div class="highlight-card">
               <div class="highlight-icon">🥭</div>
-              <strong>Real Mango<br/>Pulp</strong>
+              <strong>Vraie Pulpe<br/>de Mangue</strong>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- MID-PAGE VIDEO SECTION -->
-    <section class="video-section" id="video-break">
+    <!-- SECTION VIDÉO -->
+    <section class="video-section" id="video-pause">
       <div class="video-text-overlay">
-        <h2>Feel Every Drop</h2>
-        <p>From the orchard to your glass — nothing lost along the way.</p>
+        <h2>Ressentez Chaque Goutte</h2>
+        <p>Du verger à votre verre — rien ne se perd en chemin.</p>
       </div>
-      
-      
       <div class="video-fallback" id="videoFallback">
-        <div class="video-fallback-inner"> <img src="ASSETS/aerrny.jpg" alt=""></div>
+        <div class="video-fallback-inner"><img src="ASSETS/aerrny.jpg" alt=""></div>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section class="section about-section" id="about">
-      <div class="container about-layout">
-        <div class="about-img-col">
-          <img src="ASSETS/aeerny2.jpg" alt="Fresh mangoes from Nyambaka farms" />
-        </div>
-        <div class="about-text-col">
-          <span class="section-label">Our Story</span>
-          <h2 class="section-title left">Rooted in Nyambaka</h2>
-          <p>AEERNY was born from a simple belief: the best mango juice comes from the best mangoes — and the best mangoes grow right here in Nyambaka.</p>
-          <p>We are the <strong>Association des Élèves et Étudiants Ressortissants de Nyambaka</strong>, a community-driven initiative turned juice brand. Every bottle we sell supports local farmers, local students, and local futures.</p>
-          <p>No factory shortcuts. No artificial additives. Just mangoes, care, and community pride.</p>
-          <a href="#contact" class="btn-primary">Get in Touch</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS SECTION -->
-    <section class="section testimonials-section" id="testimonials">
+    <!-- RÉALISATIONS APERÇU -->
+    <section class="section achievements-preview-section" id="realisations-apercu">
       <div class="container">
-        <span class="section-label">What People Say</span>
-        <h2 class="section-title">Loved by Many</h2>
+        <span class="section-label">Nos Réalisations</span>
+        <h2 class="section-title">Une Histoire de Fierté</h2>
+        <p class="section-sub">Récompenses, couvertures médiatiques et jalons qui marquent notre parcours.</p>
+        <div class="achievements-preview-grid">
+          <div class="achievement-preview-card">
+            <div class="achievement-preview-icon"> 🏆</div>
+            <strong>Reconnaissances</strong>
+            <p>Prix et distinctions reçus pour notre engagement envers la qualité naturelle.</p>
+          </div>
+          <div class="achievement-preview-card">
+            <div class="achievement-preview-icon">📰</div>
+            <strong>Presse & Médias</strong>
+            <p>AEERNY dans les journaux, radios et plateformes digitales du Cameroun.</p>
+          </div>
+          <div class="achievement-preview-card">
+            <div class="achievement-preview-icon">🌱</div>
+            <strong>Impact Communautaire</strong>
+            <p>Des agriculteurs locaux soutenus, des étudiants financés, une communauté renforcée.</p>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top: 40px;">
+          <a href="realisation.html" class="btn-primary">Voir Toutes Nos Réalisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TÉMOIGNAGES -->
+    <section class="section testimonials-section" id="temoignages">
+      <div class="container">
+        <span class="section-label">Ce Qu'on Dit de Nous</span>
+        <h2 class="section-title">Aimé par Beaucoup</h2>
         <div class="testimonials-grid">
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p>"The most authentic mango juice I've ever had. You can taste the difference — it's real fruit, not flavoring."</p>
+            <p>« Le jus de mangue le plus authentique que j'aie jamais goûté. On sent la différence — c'est vrai fruit, pas arôme artificiel. »</p>
             <div class="testimonial-author">— Marie K., Yaoundé</div>
           </div>
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p>"AEERNY mango juice is now a staple at our family gatherings. My kids refuse any other brand!"</p>
+            <p>« Le jus AEERNY est désormais incontournable lors de nos réunions de famille. Mes enfants refusent toute autre marque ! »</p>
             <div class="testimonial-author">— Jean-Paul M., Douala</div>
           </div>
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p>"I love knowing the juice I drink supports a local community. Great taste with a great mission."</p>
+            <p>« J'aime savoir que le jus que je bois soutient une communauté locale. Excellent goût avec une belle mission. »</p>
             <div class="testimonial-author">— Fatima A., Ngaoundéré</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ SECTION -->
+    <!-- FAQ -->
     <section class="section faq-section" id="faq">
       <div class="container faq-container">
         <span class="section-label">Questions</span>
-        <h2 class="section-title">Frequently Asked</h2>
+        <h2 class="section-title">Foire Aux Questions</h2>
         <div class="faq-list" id="faqList">
           <div class="faq-item">
-            <button class="faq-q">Does AEERNY juice contain artificial preservatives? <span class="faq-arrow">+</span></button>
-            <div class="faq-a"><p>No. AEERNY Original Mango Juice is made with 100% natural ingredients and contains absolutely no artificial preservatives, flavors, or colors.</p></div>
+            <button class="faq-q">Le jus AEERNY contient-il des conservateurs artificiels ? <span class="faq-arrow">+</span></button>
+            <div class="faq-a"><p>Non. Le Jus de Mangue AEERNY Original est élaboré avec 100% d'ingrédients naturels et ne contient absolument aucun conservateur, arôme ou colorant artificiel.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q">Where are the mangoes sourced from? <span class="faq-arrow">+</span></button>
-            <div class="faq-a"><p>All our mangoes are hand-picked from local farms in and around Nyambaka, ensuring freshness and supporting the local agricultural community.</p></div>
+            <button class="faq-q">D'où proviennent les mangues ? <span class="faq-arrow">+</span></button>
+            <div class="faq-a"><p>Toutes nos mangues sont cueillies à la main dans les fermes locales de Nyambaka et ses environs, garantissant la fraîcheur et soutenant la communauté agricole locale.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q">How many calories are in one bottle? <span class="faq-arrow">+</span></button>
-            <div class="faq-a"><p>A 250ml serving of AEERNY Original contains approximately 120 kcal. See our full nutrition breakdown in the Nutrition Facts section above.</p></div>
+            <button class="faq-q">Combien de calories dans une bouteille ? <span class="faq-arrow">+</span></button>
+            <div class="faq-a"><p>Une portion de 250ml d'AEERNY Original contient environ 120 kcal. Consultez notre tableau nutritionnel complet dans la section Valeurs Nutritionnelles ci-dessus.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q">Can I order in bulk for events or resale? <span class="faq-arrow">+</span></button>
-            <div class="faq-a"><p>Absolutely! We welcome bulk orders for events, retailers, and distributors. Please use our contact form or reach us directly to discuss quantities and pricing.</p></div>
+            <button class="faq-q">Puis-je commander en grande quantité pour des événements ou la revente ? <span class="faq-arrow">+</span></button>
+            <div class="faq-a"><p>Absolument ! Nous acceptons les commandes en gros pour les événements, les détaillants et les distributeurs. Contactez-nous directement sur WhatsApp pour discuter des quantités et des tarifs.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q">When will the new juice varieties be available? <span class="faq-arrow">+</span></button>
-            <div class="faq-a"><p>AEERNY Lite and AEERNY Sparkling are currently in development. Sign up via our contact form to be notified first when they launch!</p></div>
+            <button class="faq-q">Comment passer une commande ? <span class="faq-arrow">+</span></button>
+            <div class="faq-a"><p>Rien de plus simple ! Cliquez sur le bouton WhatsApp dans la section Contact et envoyez-nous directement votre commande. Nous vous répondons rapidement.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT -->
     <section class="section contact-section" id="contact">
-      <div class="container contact-layout">
-        <div class="contact-info">
-          <span class="section-label">Get In Touch</span>
-          <h2 class="section-title left">Order or Ask Us Anything</h2>
-          <p>Whether you want to place an order, become a distributor, or just learn more — we're happy to hear from you.</p>
-          <div class="contact-details">
-            <div>📍 Nyambaka, Cameroon</div>
-            <div>📧 aeerny2020@gmail.com </div>
-            <div>📞 +237 691150105</div>
+      <div class="container">
+        <div class="contact-centered">
+          <span class="section-label">Contactez-Nous</span>
+          <h2 class="section-title">Commander ou Nous Écrire</h2>
+          <p class="contact-intro">Que vous souhaitiez passer une commande, devenir distributeur ou simplement en savoir plus — nous sommes là pour vous. Écrivez-nous directement sur WhatsApp, c'est rapide et simple.</p>
+
+          <a
+            href="https://wa.me/237691150105?text=Bonjour%20AEERNY%20%F0%9F%A5%AD%20Je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20votre%20jus%20de%20mangue%20et%20j'aimerais%20avoir%20plus%20d'informations."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp-btn"
+            aria-label="Nous contacter sur WhatsApp"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Écrire sur WhatsApp
+          </a>
+
+          <div class="contact-details-centered">
+            <div class="contact-detail-item">📍 Nyambaka, Cameroun</div>
+            <div class="contact-detail-item">📧 aeerny2020@gmail.com</div>
+            <div class="contact-detail-item">📞 +237 691 150 105</div>
           </div>
         </div>
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-group">
-            <label for="name"> Name</label>
-            <input type="text" id="name" name="name" placeholder="Can you enter your name please " required />
-          </div>
-          
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <select id="subject" name="subject">
-              <option value="order">Place an Order</option>
-              <option value="wholesale">Wholesale / Distribution</option>
-              <option value="general">General Enquiry</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell us more..." required></textarea>
-          </div>
-          <button type="submit" class="btn-primary full">Send Message</button>
-          <div class="form-success" id="formSuccess">✅ Message sent! We'll be in touch soon.</div>
-        </form>
       </div>
     </section>
 
@@ -300,39 +287,42 @@
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="ASSETS/AERNY LOGO.jpg" alt="AEERNY Logo" class="footer-logo" />
-        <p>Pure mango juice from the heart of Nyambaka. Community-rooted. Nature-made.</p>
+        <img src="ASSETS/AERNY LOGO.jpg" alt="Logo AEERNY" class="footer-logo" />
+        <p>Jus de mangue pur du cœur de Nyambaka. Ancré dans la communauté. Fait par la nature.</p>
       </div>
       <div class="footer-links">
-        <h4>Quick Links</h4>
+        <h4>Liens Rapides</h4>
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="#produits">Nos Produits</a></li>
+          <li><a href="histoires.html">Notre Histoire</a></li>
+          <li><a href="realisation.html">Nos Réalisations</a></li>
           <li><a href="#nutrition">Nutrition</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-social">
-        <h4>Follow Us</h4>
+        <h4>Suivez-Nous</h4>
         <div class="social-links">
-          <a href="https://www.facebook.com/profile.php?id=61570959093481 " aria-label="Facebook">Facebook</a>
+          <a href="https://www.facebook.com/profile.php?id=61570959093481" aria-label="Facebook">Facebook</a>
           <a href="https://www.instagram.com/a.e.e.r.n.y/" aria-label="Instagram">Instagram</a>
+          <a href="https://www.youtube.com/@A.E.E.R.N.Y" aria-label="YouTube">YouTube</a>
           <a href="https://whatsapp.com/channel/0029VbAmsZG0lwgl0ArW0I0J" aria-label="WhatsApp">WhatsApp</a>
         </div>
         <div class="footer-notify">
-          <p>New varieties dropping soon:</p>
-          <a href="#contact" class="btn-primary small">Notify Me</a>
+          <p>Nouvelles variétés bientôt disponibles :</p>
+          <a href="https://wa.me/237691150105?text=Bonjour%20AEERNY%2C%20je%20souhaite%20%C3%AAtre%20inform%C3%A9(e)%20des%20nouveaut%C3%A9s." target="_blank" rel="noopener noreferrer" class="btn-primary small">Me Notifier</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 AEERNY. All rights reserved. | Nyambaka, Cameroon</p>
+      <p>&copy; 2026 AEERNY. Tous droits réservés. | Nyambaka, Cameroun</p>
     </div>
   </footer>
-<script src="sidebar.js" defer></script>
-<script src="video.js" defer></script>
-<script src="main.js" defer></script>
+
+  <script src="sidebar.js" defer></script>
+  <script src="video.js" defer></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
