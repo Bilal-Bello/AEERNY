@@ -291,14 +291,14 @@
   max-width: 1140px;
   margin: 0 auto;
 }
-.footer-logo { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--orange); margin-bottom: 16px; }
+.footer-logo { width: 170px; height: 170px; border-radius: 90%; object-fit: cover; border: 2px solid var(--orange); margin-bottom: 16px; }
 .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 300px; }
 .footer-nyambaka-logo {
-  max-width: 70px;
+  max-width: 100px;
   width: 100%;
   height: auto;
   display: block;
-  margin-top: 12px;
+  margin-top: 10px;
   object-fit: contain;
 }
 .footer-links h4,
