@@ -15,3 +15,6 @@ Place the following image files in this `images/` folder:
 - Keep image file sizes under 300KB each for fast loading
 - The video should be under 3MB for fast autoplay
 - If you don't have the video yet, the page shows a beautiful gradient fallback automatically
+
+
+visit it here: nyambaka.com
