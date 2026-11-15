@@ -10,10 +10,14 @@ build/
 .next/
 
 # AI tool folders
+.agent/
 .agents/
 .codex/
 .claude/
 .cursor/
+.gemini/
+.hermes/
+.kiro/
 .impeccable/
 
 # OS/editor
