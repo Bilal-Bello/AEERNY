@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Site web AEERNY
 
 Le site présente le jus de mangue AEERNY, produit à Nyambaka, au Cameroun. Ce site statique est rédigé en français. Les visiteurs peuvent découvrir le produit et l’association, consulter les informations nutritionnelles et les réalisations, puis contacter AEERNY sur WhatsApp pour commander. Le site ne propose ni panier ni paiement en ligne.
@@ -42,3 +43,6 @@ Le dépôt Git est hébergé sur GitHub et le fichier `CNAME` contient `nyambaka
 ## Confidentialité et statistiques
 
 Les pages HTML chargent actuellement Google Analytics. Avant de collecter des statistiques de visite, déterminez comment informer les visiteurs et appliquer leurs choix de consentement à la balise Google. Le site ne comporte actuellement ni notice de confidentialité, ni notice relative aux cookies, ni bannière de consentement. Vérifiez les règles camerounaises applicables à la protection des données et au commerce électronique avant la mise en ligne ; désactivez ou bloquez Google Analytics jusqu’au consentement si nécessaire.
+=======
+visit it here: nyambaka.com
+>>>>>>> a996b62aa3a8b5c60707e713390f8deb3a0295f8
