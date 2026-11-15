@@ -1,0 +1,21 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# dependencies and builds
+node_modules/
+dist/
+build/
+.next/
+
+# AI tool folders
+.agents/
+.codex/
+.claude/
+.cursor/
+.impeccable/
+
+# OS/editor
+.DS_Store
+.vscode/
