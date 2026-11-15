@@ -445,3 +445,120 @@
   .products-grid--single { grid-template-columns: 1fr; }
   .product-img-wrap--tall { height: 260px; }
 }
+/* Shared visual direction: restrained color, clear type, no decorative effects. */
+:root {
+  --orange: #bf5b2a;
+  --orange-dark: #93431f;
+  --orange-light: #e9e5da;
+  --green: #355b46;
+  --green-light: #e5e9e2;
+  --brown: #27372e;
+  --cream: #f2f0e9;
+  --text: #27372e;
+  --text-muted: #536259;
+  --white: #f8f7f2;
+  --shadow: none;
+  --radius: 8px;
+}
+html { scroll-behavior: auto; }
+body { background: var(--cream); line-height: 1.65; }
+img { height: auto; }
+.hero, .page-hero, .video-section, .site-footer { background: #27372e; }
+.hero-bg, .video-fallback { background: #27372e; }
+.hero-image video { width: 100%; height: 100%; object-fit: cover; }
+.hero-tagline, .section-label { text-transform: none; letter-spacing: 0; border-radius: 0; }
+.section-label { font-size: .9rem; margin-bottom: 8px; }
+.section-title, .hero h1, .page-hero-content h1 { font-family: var(--font-body); font-weight: 700; letter-spacing: -.025em; }
+.section-sub, .hero p, .page-hero-content p, .about-text p, .contact-intro { max-width: 68ch; }
+.btn-primary, .btn-secondary, .topbar-cta, .whatsapp-btn, .product-badge, .timeline-year { border-radius: 4px; }
+.btn-primary:hover, .btn-secondary:hover, .topbar-cta:hover, .whatsapp-btn:hover { transform: none; box-shadow: none; }
+.topbar.scrolled { background: #27372e; box-shadow: none; }
+.product-card, .product-card--image-slot, .achievement-preview-card, .testimonial-card, .faq-item, .timeline-body, .galerie-item, .about-img, .nutrition-panel { box-shadow: none; }
+.product-card, .product-card--image-slot, .achievement-preview-card, .faq-item, .timeline-body { border: 1px solid #d2d4cc; border-radius: 6px; }
+.product-card:hover, .product-card--image-slot:hover, .achievement-preview-card:hover, .galerie-item:hover { transform: none; box-shadow: none; }
+.product-card--image-slot { background: transparent; }
+.product-img-wrap, .product-img-wrap.placeholder { background: #e4e3da; }
+.testimonial-card { border: 1px solid #d2d4cc; border-left: 1px solid #d2d4cc; }
+.achievement-preview-card { border-bottom: 1px solid #d2d4cc; }
+.nutrition-section, .mission-section { background: #355b46; }
+.achievements-preview-section, .faq-section, .about-section, .about-full, .galerie-section { background: #e5e9e2; }
+.contact-section { background: #f2f0e9; }
+.page-hero { background-color: #27372e !important; }
+.page-hero::after { opacity: .1 !important; }
+.about-img { border-radius: 6px; }
+.highlight-icon, .achievement-preview-icon, .mission-icon, .timeline-dot, .press-source-icon { display: none !important; }
+.video-text-overlay { text-shadow: none; }
+.sidebar { background: #27372e; }
+.sidebar-nav a:hover { padding-left: 28px; background: transparent; }
+:focus-visible { outline: 3px solid #bf5b2a; outline-offset: 3px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Product video hero: light canvas, transparent bottle, quiet layout. */
+.hero {
+  min-height: min(880px, 100svh);
+  background: #f2f0e9;
+  color: #27372e;
+}
+.hero-bg { display: none; }
+.hero-content {
+  max-width: 56%;
+  padding: 100px 0 100px clamp(28px, 8vw, 120px);
+  color: #27372e;
+}
+.hero-tagline {
+  padding: 0;
+  margin-bottom: 22px;
+  background: transparent;
+  color: #93431f;
+  font-size: .92rem;
+  font-weight: 700;
+}
+.hero h1 {
+  max-width: 11ch;
+  color: #27372e;
+  font-size: clamp(2.8rem, 5.5vw, 5rem);
+  line-height: 1.04;
+}
+.hero p { color: #536259; }
+.hero .btn-secondary { color: #27372e; border-color: #879188; }
+.hero .btn-secondary:hover { background: #e5e9e2; border-color: #27372e; }
+.hero-image {
+  right: 4%;
+  bottom: 5%;
+  width: 43%;
+  height: 88%;
+  align-items: center;
+  justify-content: center;
+}
+.hero-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    height: auto;
+    padding: 78px 22px 18px;
+  }
+  .hero-content {
+    max-width: 100%;
+    padding: 12px 0 0;
+  }
+  .hero h1 { max-width: 12ch; font-size: clamp(2.55rem, 12vw, 3.4rem); }
+  .hero p { max-width: 42ch; margin-bottom: 24px; }
+  .hero-image {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: min(47svh, 370px);
+    margin: auto 0 0;
+  }
+  .hero-image video { object-fit: contain; }
+}
+.topbar:not(.scrolled) .hamburger span { background: #27372e; }

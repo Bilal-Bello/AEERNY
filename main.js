@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // Keep the hero still for visitors who request reduced motion.
+  var heroVideo = document.querySelector('.hero-image video');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (heroVideo && !reduceMotion.matches) {
+    heroVideo.play().catch(function () {});
+  }
   // === ACCORDÉON FAQ ===
   var faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(function (item) {

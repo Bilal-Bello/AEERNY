@@ -12,8 +12,8 @@
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nos Réalisations – AEERNY</title>
-  <meta name="description" content="Découvrez les récompenses, distinctions et couvertures médiatiques d'AEERNY — la fierté de Nyambaka." />
+  <title>Nos Réalisations, AEERNY</title>
+  <meta name="description" content="Découvrez les récompenses, distinctions et couvertures médiatiques d'AEERNY : la fierté de Nyambaka." />
   <meta name="author" content="AEERNY" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -32,7 +32,7 @@
       overflow: hidden;
     }
     .page-hero::before {
-      content: '🏆';
+      content: '';
       position: absolute;
       right: 10%;
       top: 50%;
@@ -253,6 +253,19 @@
       .impact-number { font-size: 2.2rem; }
     }
   </style>
+  <style>
+    .page-hero { background: #27372e !important; }
+    .page-hero::after { opacity: .1 !important; }
+    .award-card, .press-card, .impact-stat, .mission-card, .timeline-body, .galerie-item, .about-img { box-shadow: none !important; }
+    .award-card, .press-card, .mission-card, .timeline-body { border-radius: 6px !important; }
+    .award-card:hover, .press-card:hover, .galerie-item:hover { transform: none !important; box-shadow: none !important; }
+    .award-card.gold::before { background: #bf5b2a !important; }
+    .award-img-wrap::after { background: rgba(39,55,46,.5) !important; }
+    .section-label { text-transform: none !important; letter-spacing: 0 !important; }
+    .section-title, .page-hero-content h1 { font-family: var(--font-body) !important; }
+    .mission-icon, .timeline-dot, .award-icon-large, .press-source-icon { display: none !important; }
+    :focus-visible { outline: 3px solid #bf5b2a; outline-offset: 3px; }
+  </style>
 </head>
 <body>
 
@@ -267,7 +280,7 @@
       <li><a href="index.html#produits">Nos Produits</a></li>
       <li><a href="histoires.html">Notre Histoire</a></li>
       <li><a href="realisation.html">Nos Réalisations</a></li>
-      <li><a href="index.html#temoignages">Témoignages</a></li>
+      
       <li><a href="index.html#faq">FAQ</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
@@ -309,12 +322,12 @@
     <div class="award-img-caption"> Distinction Nationale des Communes Modèles du Cameroun</div>
   </div>
   <div class="award-card-body">
-    <div class="award-badge">🏆 Commune Modèle du Cameroun</div>
+    <div class="award-badge"> Commune Modèle du Cameroun</div>
     <p> En 2025, à l’Hôtel Hilton de Yaoundé, la Commune de Nyambaka 
       a été distinguée parmi les Communes modèles du Cameroun. 
       Cette reconnaissance célèbre les efforts du Maire Abbo Oumarou, 
       de son équipe et de toute la communauté engagée pour le développement local.</p>
-    <div class="award-year">2025 — Région du centre</div>
+    <div class="award-year">2025 : Région du centre</div>
   </div>
 </div>
 <!--2-->
@@ -324,12 +337,12 @@
     <div class="award-img-caption"> Initiative Back to School mise en lumière par la CRTV</div>
   </div>
   <div class="award-card-body">
-    <div class="award-badge">🎓 Soutien à l’Éducation</div>
+    <div class="award-badge"> Soutien à l’Éducation</div>
     <p>La CRTV a présenté notre initiative Back to School ayant permis 
       la distribution de kits scolaires et de lampes solaires à 300 élèves 
       de Garoua-Boulaï, Nyambaka et Idool. Un projet porté par CAMTURK 
       et son équipe engagée pour l’éducation et le développement local.</p>
-    <div class="award-year">2025 — Région de l'Adamaoua</div>
+    <div class="award-year">2025 : Région de l'Adamaoua</div>
   </div>
   <!--3-->
 </div>
@@ -342,7 +355,7 @@
   </div>
 
   <div class="award-card-body">
-    <div class="award-badge">🤝 Engagement Jeunesse</div>
+    <div class="award-badge"> Engagement Jeunesse</div>
 
     <p>
       AEERNY a participé à la restitution de la FER à l’IFC Yaoundé, 
@@ -352,33 +365,33 @@
       pour la jeunesse de Nyambaka.
     </p>
 
-    <div class="award-year">2025 — Yaoundé, Cameroun</div>
+    <div class="award-year">2025 : Yaoundé, Cameroun</div>
   </div>
 </div>
 
 <!--
           <div class="award-card gold">
-            <span class="award-icon-large">🥇</span>
-            <div class="award-badge">🏅 Excellence</div>
-            <h3>Meilleur Jus Naturel — Salon des Saveurs du Cameroun</h3>
+            <span class="award-icon-large"></span>
+            <div class="award-badge"> Excellence</div>
+            <h3>Meilleur Jus Naturel : Salon des Saveurs du Cameroun</h3>
             <p>AEERNY Original a été plébiscité par le jury du Salon des Saveurs du Cameroun pour son authenticité et la pureté de ses ingrédients.</p>
-            <div class="award-year">2024 — Yaoundé</div>
+            <div class="award-year">2024 : Yaoundé</div>
           </div>
 
           <div class="award-card">
-            <span class="award-icon-large">🤝</span>
-            <div class="award-badge">💚 Communauté</div>
+            <span class="award-icon-large"></span>
+            <div class="award-badge"> Communauté</div>
             <h3>Prix de l'Initiative Solidaire</h3>
             <p>Attribué à AEERNY pour son modèle économique inclusif qui réinvestit une partie des bénéfices dans les bourses scolaires locales.</p>
-            <div class="award-year">2025 — Cameroun</div>
+            <div class="award-year">2025 : Cameroun</div>
           </div>
 
           <div class="award-card green">
-            <span class="award-icon-large">🌍</span>
-            <div class="award-badge">🚀 Croissance</div>
+            <span class="award-icon-large"></span>
+            <div class="award-badge"> Croissance</div>
             <h3>Start-up Communautaire de l'Année</h3>
             <p>Distingués pour la progression remarquable de notre distribution et notre capacité à fédérer une communauté autour d'un produit local.</p>
-            <div class="award-year">2025 — Région Nord</div>
+            <div class="award-year">2025 : Région Nord</div>
           </div>
 
         -->
@@ -391,7 +404,7 @@
       <div class="container">
         <span class="section-label">Notre Impact en Chiffres</span>
         <h2 class="section-title">Des Résultats Concrets</h2>
-        <p class="section-sub">Des chiffres qui parlent d'eux-mêmes — et derrière chaque chiffre, des personnes.</p>
+        <p class="section-sub">Des chiffres qui parlent d'eux-mêmes : et derrière chaque chiffre, des personnes.</p>
         <div class="impact-grid">
           <div class="impact-stat">
             <span class="impact-number">5+</span>
@@ -423,10 +436,10 @@
 
           <div class="press-card">
             <div class="press-source">
-              <div class="press-source-icon">📻</div>
+              <div class="press-source-icon"></div>
               <div>
                 <div class="press-source-name">Radio Régionale de l'Adamaoua</div>
-                <div class="press-source-type">Radio — Ngaoundéré</div>
+                <div class="press-source-type">Radio : Ngaoundéré</div>
               </div>
             </div>
             <blockquote>« AEERNY est l'exemple parfait d'une initiative locale qui parvient à transformer les ressources naturelles de Nyambaka en opportunités économiques durables pour toute la région. »</blockquote>
@@ -435,10 +448,10 @@
 
           <div class="press-card">
             <div class="press-source">
-              <div class="press-source-icon">📱</div>
+              <div class="press-source-icon"></div>
               <div>
                 <div class="press-source-name">Cameroun Web Actualités</div>
-                <div class="press-source-type">Web — Yaoundé</div>
+                <div class="press-source-type">Web : Yaoundé</div>
               </div>
             </div>
             <blockquote>« La marque AEERNY impressionne par sa cohérence : un produit sain, une démarche communautaire et une croissance réelle. Un modèle à suivre pour la jeunesse entrepreneuriale camerounaise. »</blockquote>
@@ -447,10 +460,10 @@
 
           <div class="press-card">
             <div class="press-source">
-              <div class="press-source-icon">📰</div>
+              <div class="press-source-icon"></div>
               <div>
                 <div class="press-source-name">Le Jeune Entrepreneur</div>
-                <div class="press-source-type">Magazine — Douala</div>
+                <div class="press-source-type">Magazine : Douala</div>
               </div>
             </div>
             <blockquote>« Rencontre avec les fondateurs d'AEERNY : comment une association étudiante a réussi à créer une marque de jus naturel qui rayonne bien au-delà de Nyambaka. »</blockquote>
@@ -459,10 +472,10 @@
 
           <div class="press-card">
             <div class="press-source">
-              <div class="press-source-icon">📺</div>
+              <div class="press-source-icon"></div>
               <div>
                 <div class="press-source-name">Télévision Régionale Nord</div>
-                <div class="press-source-type">Télévision — Garoua</div>
+                <div class="press-source-type">Télévision : Garoua</div>
               </div>
             </div>
             <blockquote>« Un reportage sur AEERNY, cette jeune marque qui prouve que l'agroalimentaire camerounais peut être à la fois authentique, sain et porteur de développement local. »</blockquote>
@@ -471,10 +484,10 @@
 
           <div class="press-card">
             <div class="press-source">
-              <div class="press-source-icon">🌐</div>
+              <div class="press-source-icon"></div>
               <div>
                 <div class="press-source-name">StartupCamer.com</div>
-                <div class="press-source-type">Web — National</div>
+                <div class="press-source-type">Web : National</div>
               </div>
             </div>
             <blockquote>« AEERNY figure parmi les 10 start-ups camerounaises les plus prometteuses du secteur agri-food en 2025, selon notre panel d'experts. »</blockquote>
@@ -483,10 +496,10 @@
 
           <div class="press-card">
             <div class="press-source">
-              <div class="press-source-icon">📻</div>
+              <div class="press-source-icon"></div>
               <div>
                 <div class="press-source-name">Voix du Paysan Camerounais</div>
-                <div class="press-source-type">Radio — National</div>
+                <div class="press-source-type">Radio : National</div>
               </div>
             </div>
             <blockquote>« L'histoire d'AEERNY, c'est celle de jeunes qui ont choisi de valoriser leur terroir plutôt que de le quitter. Une bouffée d'espoir pour l'agriculture locale. »</blockquote>

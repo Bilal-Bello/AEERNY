@@ -12,7 +12,7 @@
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Notre Histoire – AEERNY</title>
+  <title>Notre Histoire, AEERNY</title>
   <meta name="description" content="Découvrez l'histoire d'AEERNY, née de la passion pour Nyambaka et son engagement envers les agriculteurs locaux et les étudiants." />
   <meta name="author" content="AEERNY" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -240,6 +240,19 @@
       .timeline::before { left: 20px; }
     }
   </style>
+  <style>
+    .page-hero { background: #27372e !important; }
+    .page-hero::after { opacity: .1 !important; }
+    .award-card, .press-card, .impact-stat, .mission-card, .timeline-body, .galerie-item, .about-img { box-shadow: none !important; }
+    .award-card, .press-card, .mission-card, .timeline-body { border-radius: 6px !important; }
+    .award-card:hover, .press-card:hover, .galerie-item:hover { transform: none !important; box-shadow: none !important; }
+    .award-card.gold::before { background: #bf5b2a !important; }
+    .award-img-wrap::after { background: rgba(39,55,46,.5) !important; }
+    .section-label { text-transform: none !important; letter-spacing: 0 !important; }
+    .section-title, .page-hero-content h1 { font-family: var(--font-body) !important; }
+    .mission-icon, .timeline-dot, .award-icon-large, .press-source-icon { display: none !important; }
+    :focus-visible { outline: 3px solid #bf5b2a; outline-offset: 3px; }
+  </style>
 </head>
 <body>
 
@@ -254,7 +267,7 @@
       <li><a href="index.html#produits">Nos Produits</a></li>
       <li><a href="histoires.html">Notre Histoire</a></li>
       <li><a href="realisation.html">Nos Réalisations</a></li>
-      <li><a href="index.html#temoignages">Témoignages</a></li>
+      
       <li><a href="index.html#faq">FAQ</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
@@ -282,7 +295,7 @@
       </div>
     </div>
 
-    <!-- NOTRE HISTOIRE — TEXTE + IMAGES -->
+    <!-- NOTRE HISTOIRE : TEXTE + IMAGES -->
     <section class="section about-full">
       <div class="container">
         <div class="about-two-col">
@@ -291,7 +304,7 @@
           </div>
           <div class="about-text">
             <h2>Un Jus Né d'une Conviction</h2>
-            <p>AEERNY est née d'une conviction simple : le meilleur jus de mangue vient des meilleures mangues — et les meilleures mangues poussent ici, à Nyambaka.</p>
+            <p>AEERNY est née d'une conviction simple : le meilleur jus de mangue vient des meilleures mangues : et les meilleures mangues poussent ici, à Nyambaka.</p>
             <p>Nous sommes l'<strong>Association des Élèves et Étudiants Ressortissants de Nyambaka</strong>, une initiative communautaire transformée en marque de jus. Chaque bouteille vendue soutient les agriculteurs locaux, les étudiants locaux, et les avenirs locaux.</p>
             <p>Pas de raccourcis industriels. Pas d'additifs artificiels. Juste des mangues, du soin, et la fierté d'une communauté.</p>
           </div>
@@ -307,22 +320,22 @@
         <p class="section-sub">Trois piliers fondateurs qui guident chaque décision chez AEERNY.</p>
         <div class="mission-grid">
           <div class="mission-card">
-            <div class="mission-icon">🌾</div>
+            <div class="mission-icon"></div>
             <h3>Encourager l’Entrepreneuriat Jeune</h3>
             <p>Nous accompagnons les jeunes de Nyambaka qui transforment la mangue en une véritable opportunité économique locale, porteuse d’innovation et d’avenir</p>
           </div>
           <div class="mission-card">
-            <div class="mission-icon">🎓</div>
+            <div class="mission-icon"></div>
             <h3>Financer les Études</h3>
             <p>Une partie de nos revenus contribue aux bourses d'études pour les jeunes ressortissants de Nyambaka.</p>
           </div>
           <div class="mission-card">
-            <div class="mission-icon">🌱</div>
+            <div class="mission-icon"></div>
             <h3>Préserver la Nature</h3>
             <p>Sans conservateurs, sans colorants. Nous défendons une production respectueuse de l'environnement à chaque étape.</p>
           </div>
           <div class="mission-card">
-            <div class="mission-icon">🤝</div>
+            <div class="mission-icon"></div>
             <h3>Renforcer la Communauté</h3>
             <p>AEERNY rassemble. Chaque gorgée est un acte de solidarité envers ceux qui font vivre Nyambaka.</p>
           </div>
@@ -337,7 +350,7 @@
         <h2 class="section-title">Les Grandes Étapes</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <div class="timeline-dot">🌱</div>
+            <div class="timeline-dot"></div>
             <div class="timeline-body">
               <span class="timeline-year">2020</span>
               <h3>La Fondation de l'AEERNY</h3>
@@ -345,7 +358,7 @@
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-dot">🥭</div>
+            <div class="timeline-dot"></div>
             <div class="timeline-body">
               <span class="timeline-year">2022</span>
               <h3>Développement des Activités Communautaires</h3>
@@ -353,7 +366,7 @@
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-dot">📦</div>
+            <div class="timeline-dot"></div>
             <div class="timeline-body">
               <span class="timeline-year">2023</span>
               <h3>Lancement Commercial</h3>
@@ -361,7 +374,7 @@
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-dot">🏆</div>
+            <div class="timeline-dot"></div>
             <div class="timeline-body">
               <span class="timeline-year">2024–2025</span>
               <h3>Reconnaissance & Croissance</h3>
@@ -369,7 +382,7 @@
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-dot">🚀</div>
+            <div class="timeline-dot"></div>
             <div class="timeline-body">
               <span class="timeline-year">2026 & Au-delà</span>
               <h3>Vers une Mini-Usine de Production</h3>
